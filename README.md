@@ -4,9 +4,9 @@ Restquest
 SYN. SYN-ACK?
 -------------
 
-ReST is a beautiful thing.  Building ReSTful apps in PHP is not.  Restquest is a small set of classes that make building Restquest apps in PHP less complicated.
+ReST is a beautiful thing.  Building ReSTful apps in PHP is not.  Restquest is a small set of classes that make building ReSTful apps in PHP less complicated.
 
-Restquest abstracts away the ugliness of HTTP in PHP (the headers, parsing the body, PUT & DELETE requests) into a clean simple class.  By no means is Restquest only for ReSTful APIs.  Restquest can be used in any PHP application to simplify your life.
+Restquest abstracts away the ugliness of HTTP in PHP (the headers, parsing the body, PUT & DELETE requests) into a clean simple interface.  By no means is Restquest only for ReSTful APIs.  Restquest can be used in any PHP application to simplify your HTTP life.
 
 Installation
 ------------
@@ -47,7 +47,7 @@ The output
       ["uri"]=>
       string(43) "http://localhost/test.json"
       ["path"]=>
-      string(23) "/put_json.php/test.json"
+      string(23) "/test.json"
       ["method"]=>
       string(3) "PUT"
       ["body"]=>
@@ -69,7 +69,7 @@ The output
         ["user_agent"]=>
         string(90) "curl/7.19.5 (i386-apple-darwin8.11.1) libcurl/7.19.5 OpenSSL/0.9.7l zlib/1.2.3 libidn/1.15"
         ["host"]=>
-        string(13) "restquest.com"
+        string(13) "localhost"
         ["accept"]=>
         string(3) "*/*"
       }
@@ -85,7 +85,7 @@ The output
       ["extension"]=>
       string(4) "json"
       ["domain"]=>
-      string(13) "restquest.com"
+      string(13) "localhost"
       ["protocol"]=>
       string(4) "http"
     }
