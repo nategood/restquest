@@ -107,4 +107,4 @@ Restquest is released under the [MIT License][4].  Have fun.  ReST easy.
 [1]: http://www.w3.org/Protocols/rfc2616/rfc2616.html
 [2]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_Error
 [3]: http://www.infoq.com/articles/rest-introduction
-[4]: https://github.com/nategood/restquest
+[4]: https://github.com/nategood/restquest/blob/master/license.txt
