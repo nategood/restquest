@@ -12,7 +12,7 @@
  * `curl -X DELETE http://localhost/trivial.php`
  */
 
-require('../Restquest.php');
+require('../Restquest.class.php');
 
 $request = new Restquest;
 

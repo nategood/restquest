@@ -5,8 +5,8 @@
  * @author Nate Good <me@nategood.com>
  */
 
-require('./Http.class.php');
-require('./HttpException.class.php');
+require('Http.class.php');
+require('HttpException.class.php');
 
 class Restquest {
     const DEFAULT_EXTENSION     = 'html';
@@ -121,22 +121,20 @@ class Restquest {
      * Throws an exception if this request does not match what the 
      * server/script is expecting.  Cuts down on boiler plate.
      * 
-     * @param mixed string or array of strings of acceptable HTTP methods
-     * @param mixed string or array of strings of acceptable content types
+     * @param mixed string or array of strings of acceptable HTTP methods, if null accept everything
+     * @param mixed string or array of strings of acceptable content types, if null accept everything
      * @throws HttpException
      */
-    public function expect($methods, $types = null) {
-        if ((is_array($methods) && !in_array($this->method, $methods)) 
-            || $this->method != $methods) {
-                throw new HttpException(405);
-        }
+    public function expect($methods = null, $types = null) {
+        if (!is_array($methods))
+            $methods = array($methods);        
+        if (!empty($this->method) && !in_array($this->method, $methods))
+            throw new HttpException(405);
         
-        if (!empty($types)) {
-            if ((is_array($types) && !in_array($this->content_type, $types))
-                || $this->content_type != $types) {
-                    throw new HttpException(415);
-            }
-        }
+        if (!is_array($types))
+            $types = array($types);        
+        if (!empty($this->content_type) && !in_array($this->content_type, $types))
+            throw new HttpException(415);
     }
     
     // Safe and Idempotent
