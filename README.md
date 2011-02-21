@@ -24,7 +24,7 @@ The HTTP Request
 
     PUT /test.json HTTP/1.1
     User-Agent: curl/7.19.5 (i386-apple-darwin8.11.1) libcurl/7.19.5 OpenSSL/0.9.7l zlib/1.2.3 libidn/1.15
-    Host: restquest.com
+    Host: localhost
     Accept: */*
     Content-type: application/json
     Content-Length: 87
